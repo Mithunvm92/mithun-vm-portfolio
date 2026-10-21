@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+src/main.jsx.pre-ate-backup
+src/main.jsx.backup-*
