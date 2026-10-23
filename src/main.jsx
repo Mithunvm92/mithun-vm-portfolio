@@ -120,7 +120,7 @@ function App() {
       <header className="topbar">
         <a href="#home" className="brand" onClick={closeMenu} aria-label="Mithun VM home">
           <span className="brand-mark">M<span>.</span></span>
-          <span className="brand-copy">MITHUN VM<small>ENGINEER · BUILDER</small></span>
+          <span className="brand-copy">MITHUN VALAPPIL MANI<small>ENGINEERING · AUTOMATION · ANALYTICS</small></span>
         </a>
         <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"}>
           {menuOpen ? <X size={21} /> : <Menu size={21} />}
