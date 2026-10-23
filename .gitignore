@@ -7,3 +7,6 @@ src/main.jsx.pre-ate-backup
 src/main.jsx.backup-*
 
 src/*.bak
+
+# Local source backups
+src/*.before-*

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
-  ArrowDownRight, ArrowRight, ArrowUpRight, BriefcaseBusiness, Check,
+  Activity, ArrowDownRight, ArrowRight, ArrowUpRight, BarChart3, BriefcaseBusiness, Check,
   ChevronDown, CircuitBoard, Code2, Cpu, ExternalLink, Github, Globe,
   Mail, Menu, MessageSquare, RadioTower, ShieldCheck, Sparkles, Workflow,
   Wrench, X, Zap
@@ -117,6 +117,52 @@ function App() {
     <div className="site-shell">
       <div className="ambient ambient-one" aria-hidden="true" />
       <div className="ambient ambient-two" aria-hidden="true" />
+      <div className="circuit-backdrop" aria-hidden="true">
+        <svg viewBox="0 0 1440 1800" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="circuit-glow" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#168bb8" stopOpacity=".08" />
+              <stop offset="50%" stopColor="#18c9e8" stopOpacity=".65" />
+              <stop offset="100%" stopColor="#168bb8" stopOpacity=".08" />
+            </linearGradient>
+          </defs>
+          <g className="circuit-lines" fill="none" stroke="url(#circuit-glow)" strokeWidth="1.2">
+            <path d="M-80 180 H180 L240 240 H420 L470 290 H620" />
+            <path d="M1480 260 H1280 L1210 330 H1060 L1000 390 H850" />
+            <path d="M-70 610 H130 L200 540 H390 L450 480 H590" />
+            <path d="M1500 720 H1320 L1240 800 H1100 L1040 860 H900" />
+            <path d="M-80 1120 H170 L250 1040 H420 L500 960 H650" />
+            <path d="M1490 1220 H1300 L1220 1300 H1080 L1000 1380 H860" />
+            <path d="M-70 1580 H180 L250 1510 H430 L500 1440 H650" />
+            <path d="M1440 1660 H1260 L1190 1590 H1040 L970 1520 H830" />
+            <path d="M720 -30 V160 L780 220 V410 L720 470 V650" />
+            <path d="M350 730 V850 L410 910 V1080 L350 1140 V1320" />
+            <path d="M1110 900 V1010 L1050 1070 V1210 L1110 1270 V1450" />
+          </g>
+          <g className="circuit-nodes" fill="#35d9f5">
+            <circle cx="240" cy="240" r="3" />
+            <circle cx="470" cy="290" r="3" />
+            <circle cx="1210" cy="330" r="3" />
+            <circle cx="1000" cy="390" r="3" />
+            <circle cx="200" cy="540" r="3" />
+            <circle cx="450" cy="480" r="3" />
+            <circle cx="1240" cy="800" r="3" />
+            <circle cx="1040" cy="860" r="3" />
+            <circle cx="250" cy="1040" r="3" />
+            <circle cx="500" cy="960" r="3" />
+            <circle cx="1220" cy="1300" r="3" />
+            <circle cx="1000" cy="1380" r="3" />
+            <circle cx="250" cy="1510" r="3" />
+            <circle cx="500" cy="1440" r="3" />
+          </g>
+          <path className="circuit-pulse" d="M-20 610 H130 L200 540 H390 L450 480 H590" fill="none" stroke="#68efff" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+        <div className="circuit-tech circuit-chip">⌘ <span>ATE</span></div>
+        <div className="circuit-tech circuit-iot">⌁ <span>IoT</span></div>
+        <div className="circuit-tech circuit-cloud">☁ <span>Cloud</span></div>
+        <div className="circuit-tech circuit-python">Py <span>Python</span></div>
+        <div className="circuit-tech circuit-data">▤ <span>SQL</span></div>
+      </div>
       <header className="topbar">
         <a href="#home" className="brand" onClick={closeMenu} aria-label="Mithun VM home">
           <span className="brand-mark">M<span>.</span></span>
@@ -206,6 +252,110 @@ function App() {
               </article>;
             })}
           </div>
+          <section className="ate-case-study" id="ate-case-study">
+            <div className="ate-case-heading">
+              <div>
+                <span className="section-kicker">FEATURED CASE STUDY · SEMICONDUCTOR TEST ANALYTICS</span>
+                <h2>ATE Yield Intelligence<span className="accent-dot">.</span></h2>
+                <p>Turning automated test results into a clearer view of yield, failure patterns, lot variation, and parametric behaviour.</p>
+              </div>
+              <a className="button button-secondary" href="https://github.com/Mithunvm92/ate-yield-intelligence" target="_blank" rel="noreferrer">
+                Explore repository <ExternalLink size={15}/>
+              </a>
+            </div>
+
+            <div className="ate-architecture" aria-label="ATE analytics workflow">
+              <div className="ate-flow-node"><span>01</span><strong>ATE data</strong><small>CSV results</small></div>
+              <div className="ate-flow-connector" aria-hidden="true"></div>
+              <div className="ate-flow-node"><span>02</span><strong>Validation</strong><small>Schema & fields</small></div>
+              <div className="ate-flow-connector" aria-hidden="true"></div>
+              <div className="ate-flow-node"><span>03</span><strong>Analysis API</strong><small>FastAPI · Pandas</small></div>
+              <div className="ate-flow-connector" aria-hidden="true"></div>
+              <div className="ate-flow-node"><span>04</span><strong>Insights</strong><small>React charts</small></div>
+            </div>
+
+            <div className="ate-dashboard-preview">
+              <div className="ate-dashboard-title">
+                <div>
+                  <span className="ate-preview-eyebrow">DASHBOARD PREVIEW</span>
+                  <h3>Test analytics overview</h3>
+                </div>
+                <span className="ate-sample-label">ILLUSTRATIVE SAMPLE DATA</span>
+              </div>
+
+              <div className="ate-kpi-grid">
+                <div className="ate-kpi"><span>Overall yield</span><strong>96.8%</strong><small>Example metric</small></div>
+                <div className="ate-kpi"><span>Lots analysed</span><strong>24</strong><small>Example dataset</small></div>
+                <div className="ate-kpi"><span>Top failure bin</span><strong>BIN 03</strong><small>Example classification</small></div>
+              </div>
+
+              <div className="ate-chart-grid">
+                <div className="ate-chart-panel">
+                  <div className="ate-chart-heading"><strong>Yield by lot</strong><span>Illustrative %</span></div>
+                  <div className="ate-yield-chart">
+                    <div className="ate-chart-ylabels"><span>100</span><span>95</span><span>90</span><span>85</span></div>
+                    <svg viewBox="0 0 440 150" role="img" aria-label="Illustrative yield by lot line chart">
+                      <g className="ate-chart-gridlines"><path d="M8 15H432 M8 52H432 M8 89H432 M8 126H432"/></g>
+                      <path className="ate-yield-area" d="M12 44 L72 35 L132 57 L192 29 L252 48 L312 22 L372 38 L428 18 L428 126 L12 126 Z"/>
+                      <path className="ate-yield-line" d="M12 44 L72 35 L132 57 L192 29 L252 48 L312 22 L372 38 L428 18"/>
+                      <g className="ate-yield-points"><circle cx="12" cy="44" r="3"/><circle cx="72" cy="35" r="3"/><circle cx="132" cy="57" r="3"/><circle cx="192" cy="29" r="3"/><circle cx="252" cy="48" r="3"/><circle cx="312" cy="22" r="3"/><circle cx="372" cy="38" r="3"/><circle cx="428" cy="18" r="3"/></g>
+                    </svg>
+                  </div>
+                  <div className="ate-chart-xlabels"><span>Lot 01</span><span>Lot 04</span><span>Lot 08</span></div>
+                </div>
+
+                <div className="ate-chart-panel">
+                  <div className="ate-chart-heading"><strong>Failure-bin Pareto</strong><span>Illustrative counts</span></div>
+                  <div className="ate-pareto">
+                    <div className="ate-pareto-row"><span>Bin 03</span><div><i style={{width:"88%"}}/></div><b>44</b></div>
+                    <div className="ate-pareto-row"><span>Bin 07</span><div><i style={{width:"62%"}}/></div><b>31</b></div>
+                    <div className="ate-pareto-row"><span>Bin 12</span><div><i style={{width:"38%"}}/></div><b>19</b></div>
+                    <div className="ate-pareto-row"><span>Bin 02</span><div><i style={{width:"22%"}}/></div><b>11</b></div>
+                    <div className="ate-pareto-row"><span>Other</span><div><i style={{width:"14%"}}/></div><b>7</b></div>
+                  </div>
+                </div>
+
+                <div className="ate-chart-panel ate-param-panel">
+                  <div className="ate-chart-heading"><strong>Parametric distribution</strong><span>Illustrative values</span></div>
+                  <svg className="ate-distribution" viewBox="0 0 440 140" role="img" aria-label="Illustrative parametric measurement distribution">
+                    <g className="ate-chart-gridlines"><path d="M12 20H430 M12 54H430 M12 88H430 M12 120H430"/></g>
+                    <path className="ate-distribution-area" d="M12 120 C60 120 82 112 120 94 S175 30 220 22 S274 37 312 78 S365 117 430 120 L430 120 L12 120Z"/>
+                    <path className="ate-distribution-line" d="M12 120 C60 120 82 112 120 94 S175 30 220 22 S274 37 312 78 S365 117 430 120"/>
+                    <path className="ate-limit-line" d="M145 120V64 M295 120V64"/>
+                  </svg>
+                  <div className="ate-chart-xlabels"><span>Low</span><span>Measurement range</span><span>High</span></div>
+                </div>
+              </div>
+              <p className="ate-preview-note">Conceptual UI preview only. Figures and chart shapes are placeholders, not measured production results.</p>
+              <div className="ate-engineering-insight">
+                <strong>Engineering insight</strong>
+                <p>Use lot-to-lot yield trends to identify variation that needs investigation, then use the failure-bin Pareto to prioritize dominant failure categories. Validate findings against actual test records before drawing conclusions.</p>
+              </div>
+            </div>
+
+            <div className="ate-capability-grid">
+              <article className="ate-capability">
+                <span className="ate-capability-icon"><Cpu size={19}/></span>
+                <h3>Yield & lot comparison</h3>
+                <p>Compare test outcomes across lots and review yield calculations using the available test records.</p>
+              </article>
+              <article className="ate-capability">
+                <span className="ate-capability-icon"><BarChart3 size={19}/></span>
+                <h3>Failure-bin Pareto</h3>
+                <p>Surface dominant failure bins to help focus engineering investigation on the largest contributors.</p>
+              </article>
+              <article className="ate-capability">
+                <span className="ate-capability-icon"><Activity size={19}/></span>
+                <h3>Parametric analysis</h3>
+                <p>Visualize numeric test measurements to inspect distributions and potential outliers.</p>
+              </article>
+            </div>
+
+            <div className="ate-case-footer">
+              <p><strong>Engineering focus:</strong> data validation, repeatable analysis, yield monitoring, and decision support. Results depend on the uploaded dataset; no production improvement figures are claimed here.</p>
+              <div className="tag-list"><span>Python</span><span>FastAPI</span><span>React</span><span>TypeScript</span><span>Pandas</span><span>Pytest</span></div>
+            </div>
+          </section>
 
         </section>
 
