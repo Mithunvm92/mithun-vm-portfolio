@@ -138,8 +138,8 @@ function App() {
         <section className="hero section-wrap" id="home">
           <div className="hero-copy">
             <div className="eyebrow"><span className="status-dot" /> OPEN TO SELECT OPPORTUNITIES</div>
-            <h1>Engineering meets<br /><span className="gradient-text">practical solutions.</span></h1>
-            <p className="hero-lede">I’m Mithun — a semiconductor ATE test operations and hardware troubleshooting professional with 12+ years across automotive IC production, product qualification, RF test systems, medical equipment, and IoT-enabled operations. I combine hands-on fault diagnosis with data-driven RCA, automation, and modern monitoring tools.</p>
+            <h1><span className="name-heading">Mithun Valappil Mani</span><br /><span className="gradient-text">Engineering meets practical solutions.</span></h1>
+            <p className="hero-lede">I’m Mithun Valappil Mani — a semiconductor ATE test operations and hardware troubleshooting professional with 15 years across automotive IC production, product qualification, RF test systems, medical equipment, and IoT-enabled operations. I combine hands-on fault diagnosis with data-driven RCA, automation, and modern monitoring tools.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">Explore my work <ArrowDownRight size={17} /></a>
               <button className="button button-secondary" onClick={() => openContact("freelance")}>Discuss a project <ArrowUpRight size={16} /></button>
@@ -173,7 +173,7 @@ function App() {
             <article className="pathway-card recruiter-card">
               <div className="pathway-top"><span className="pathway-icon"><BriefcaseBusiness size={21}/></span><span className="pathway-index">PATH 01</span></div>
               <h3>For recruiters & hiring teams</h3>
-              <p>Explore 12+ years in ATE test operations, semiconductor product qualification, equipment troubleshooting, reliability, and IoT technical support — with a strong fit for test engineering, lab operations, validation, and hardware support roles.</p>
+              <p>Explore 15 years in ATE test operations, semiconductor product qualification, equipment troubleshooting, reliability, and IoT technical support — with a strong fit for test engineering, lab operations, validation, and hardware support roles.</p>
               <div className="pathway-tags"><span>ATE Test Operations</span><span>Qualification & Reliability</span><span>Lab / Equipment Operations</span></div>
               <a className="text-link" href="#experience">Explore experience <ArrowRight size={16}/></a>
             </article>
@@ -206,14 +206,14 @@ function App() {
               </article>;
             })}
           </div>
-          <div className="project-note"><Sparkles size={16}/><p><b>Next improvement:</b> Add real screenshots, architecture diagrams, measured results, and public demo links where safe. Never publish employer-confidential information or secrets.</p></div>
+
         </section>
 
         <section className="experience-section" id="experience">
           <div className="section-wrap experience-inner">
             <div className="section-heading">
               <div><span className="section-kicker">CAREER JOURNEY</span><h2>Built on engineering.<br/>Expanded through software<span className="accent-dot">.</span></h2></div>
-              <p>12+ years across semiconductor final test, RF systems, medical equipment, and IoT technical operations, supported by practical data, API, and monitoring skills.</p>
+              <p>15 years across semiconductor final test, RF systems, medical equipment, and IoT technical operations, supported by practical data, API, and monitoring skills.</p>
             </div>
             <div className="timeline">
               <article className="timeline-item">
